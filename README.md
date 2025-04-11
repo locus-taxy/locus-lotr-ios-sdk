@@ -43,8 +43,8 @@ This should correspond to the app being launched with a user already logged in.
 Ensure that the app has "Always" access to precise location.
 ```
 LocusSDK.startTracking(
-    successBlock: {print("Successfully started location tracking")},
-    failureBlock: {error in print("Error in starting tracking \(error.message)") }
+    successBlock: { print("Successfully started location tracking") },
+    failureBlock: { error in print("Error in starting tracking \(error.message)") }
 )
 ```
 The SDK will collect locations and keep syncing them in batches to the Locus server.
@@ -53,8 +53,8 @@ The last known location can be obtained from `LocusSDK.getLastKnownLocation`.
 Location tracking can be stopped when it's not required.
 ```
 LocusSDK.stopTracking(
-    successBlock: {print("Successfully stopped location tracking")},
-    failureBlock: {error in print("Error in stopping tracking \(error.message)") }
+    successBlock: { print("Successfully stopped location tracking") },
+    failureBlock: { error in print("Error in stopping tracking \(error.message)") }
 )
 
 ```
@@ -68,5 +68,28 @@ LocusSDK.logout(
     failureBlock: { error in
         print("Logout error \(error.message)")
     }
+)
+```
+
+## Sending Task updates
+```
+try LocusSDK.updateTaskStatus(
+    taskStatusUpdateParams: TaskStatusUpdateParams(
+        taskId: "taskId-xyz",
+        taskStatus: .accepted,
+        checklist: ["checklist-item-key": "checklist input value"]
+    )
+)
+```
+
+## Sending visit updates
+```
+try LocusSDK.updateVisitStatus(
+    visitStatusUpdateParams: VisitStatusUpdateParams(
+        taskId: "taskId-xyz",
+        visitId: "homebase",
+        visitStatus: .started,
+        checklist: ["OTP":"2204"]
+    )
 )
 ```
