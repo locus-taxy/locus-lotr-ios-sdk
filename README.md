@@ -1,7 +1,7 @@
 # Locus LOTR iOS SDK
 
 ## App set up
- - Add capability: Background modes. Enable "Background fetch", "Location updates" and "Remote notifications".
+ - Add capability: Background modes. Enable "Background fetch" and "Location updates".
  - Add the following keys in the app's `Info.plist`.
  ```
  NSLocationAlwaysAndWhenInUseUsageDescription
