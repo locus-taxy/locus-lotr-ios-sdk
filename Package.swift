@@ -15,19 +15,18 @@ let package = Package(
         .package(url: "https://github.com/Alamofire/Alamofire", from: "5.9.0"),
         .package(url: "https://github.com/Moya/Moya", from: "15.0.0"),
         .package(url: "https://github.com/ReactiveX/RxSwift", from: "6.6.0"),
-        .package(url: "https://github.com/RxSwiftCommunity/RxCoreLocation", from: "1.5.1"),
-        .package(url: "https://github.com/realm/realm-swift", exact: "10.49.1"),
+        .package(url: "https://github.com/realm/realm-swift", from: "10.54.4"),
     ],
     targets: [
         .binaryTarget(
             name: "LotrModels",
-            url: "https://ios-sdk.locus-api.com/swiftpm/lotrModels/1.0.0/LotrModels.xcframework.zip",
-            checksum: "e5b96fa5f55c18e62b9cedbe3e21517e8f8e72c90191467662f6b6c8e760c58c"
+            url: "https://locus-binaries.s3.ap-south-1.amazonaws.com/LotrModels.xcframework.zip",
+            checksum: "5f957e932e67150d4b74268ce1607f8508d4b097e65982f09dc106e66b4c9a79"
         ),
         .binaryTarget(
             name: "LotrSdk",
-            url: "https://ios-sdk.locus-api.com/swiftpm/lotrSdk/1.0.0/LotrSdk.xcframework.zip",
-            checksum: "b5f1c2914e5b08d3c7e6a0882860ea4d228c39b0d976c225d7a483d4b3981cbd"
+            url: "https://locus-binaries.s3.ap-south-1.amazonaws.com/LotrSdk.xcframework.zip",
+            checksum: "776ce4beeecac34a78dad3987e4c023af7684c78b17c7c8a3d33298400b9a181"
         ),
         .target(
             name: "LocusLotrSdk",
@@ -36,9 +35,7 @@ let package = Package(
                 "LotrSdk",
                 .product(name: "Alamofire", package: "Alamofire"),
                 .product(name: "Moya", package: "Moya"),
-                .product(name: "RxCoreLocation", package: "RxCoreLocation"),
                 .product(name: "RxSwift", package: "RxSwift"),
-                .product(name: "Realm", package: "realm-swift"),
                 .product(name: "RealmSwift", package: "realm-swift"),
             ]
         ),
