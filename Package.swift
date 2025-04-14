@@ -9,7 +9,7 @@ let package = Package(
         .iOS(.v15)
     ],
     products: [
-        .library(name: "LocusLotrSdk", targets: ["LocusLotrSdk"]),
+        .library(name: "LocusLotrSdk", type: .dynamic, targets: ["LocusLotrSdk"]),
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire", from: "5.9.0"),
