@@ -15,18 +15,17 @@ let package = Package(
         .package(url: "https://github.com/Alamofire/Alamofire", from: "5.9.0"),
         .package(url: "https://github.com/Moya/Moya", from: "15.0.0"),
         .package(url: "https://github.com/ReactiveX/RxSwift", from: "6.6.0"),
-        .package(url: "https://github.com/realm/realm-swift", from: "10.54.4"),
     ],
     targets: [
         .binaryTarget(
             name: "LotrModels",
             url: "https://locus-binaries.s3.ap-south-1.amazonaws.com/LotrModels.xcframework.zip",
-            checksum: "5f957e932e67150d4b74268ce1607f8508d4b097e65982f09dc106e66b4c9a79"
+            checksum: "4d5f99fc92ed4a3c7ad943dc8ca8b8745c8cc7d2576e7d79df635f348e26ad7f"
         ),
         .binaryTarget(
             name: "LotrSdk",
             url: "https://locus-binaries.s3.ap-south-1.amazonaws.com/LotrSdk.xcframework.zip",
-            checksum: "776ce4beeecac34a78dad3987e4c023af7684c78b17c7c8a3d33298400b9a181"
+            checksum: "ddd589d66e4a4ed403c6fef05a669cac4692b6ea8d5cbe4b16058b3503de39d3"
         ),
         .target(
             name: "LocusLotrSdk",
@@ -36,7 +35,6 @@ let package = Package(
                 .product(name: "Alamofire", package: "Alamofire"),
                 .product(name: "Moya", package: "Moya"),
                 .product(name: "RxSwift", package: "RxSwift"),
-                .product(name: "RealmSwift", package: "realm-swift"),
             ]
         ),
     ]
