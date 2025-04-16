@@ -14,7 +14,6 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire", from: "5.9.0"),
         .package(url: "https://github.com/Moya/Moya", from: "15.0.0"),
-        .package(url: "https://github.com/ReactiveX/RxSwift", from: "6.6.0"),
     ],
     targets: [
         .binaryTarget(
@@ -25,7 +24,7 @@ let package = Package(
         .binaryTarget(
             name: "LotrSdk",
             url: "https://locus-binaries.s3.ap-south-1.amazonaws.com/LotrSdk.xcframework.zip",
-            checksum: "ddd589d66e4a4ed403c6fef05a669cac4692b6ea8d5cbe4b16058b3503de39d3"
+            checksum: "e8a1e0f27bed737792c62043c77fd604c329ffad9aa9e66757ec4bfe478b0611"
         ),
         .target(
             name: "LocusLotrSdk",
@@ -34,7 +33,6 @@ let package = Package(
                 "LotrSdk",
                 .product(name: "Alamofire", package: "Alamofire"),
                 .product(name: "Moya", package: "Moya"),
-                .product(name: "RxSwift", package: "RxSwift"),
             ]
         ),
     ]
