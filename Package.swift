@@ -20,7 +20,7 @@ let package = Package(
         .binaryTarget(
             name: "LotrSdk",
             url: "https://locus-binaries.s3.ap-south-1.amazonaws.com/LotrSdk.xcframework.zip",
-            checksum: "4b72a6faea7b64e7c8d0c61695dec8207e2c422afc1a84a0d0c669a6b9ab386b"
+            checksum: "16397acd50fc0fb3ced88da4c32306bb79f204a7bf330f8ca42e85fdac454a51"
         ),
         .target(
             name: "LocusLotrSdk",
