@@ -11,10 +11,6 @@ let package = Package(
     products: [
         .library(name: "LocusLotrSdk", targets: ["LocusLotrSdk"]),
     ],
-    dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire", from: "5.9.0"),
-        .package(url: "https://github.com/Moya/Moya", from: "15.0.0"),
-    ],
     targets: [
         .binaryTarget(
             name: "LotrModels",
@@ -24,15 +20,13 @@ let package = Package(
         .binaryTarget(
             name: "LotrSdk",
             url: "https://locus-binaries.s3.ap-south-1.amazonaws.com/LotrSdk.xcframework.zip",
-            checksum: "e8a1e0f27bed737792c62043c77fd604c329ffad9aa9e66757ec4bfe478b0611"
+            checksum: "79588cd2ba6e0c4d7e781e9ef80248dba1fc57fc95572874f6bd6a986fddb99e"
         ),
         .target(
             name: "LocusLotrSdk",
             dependencies: [
                 "LotrModels",
                 "LotrSdk",
-                .product(name: "Alamofire", package: "Alamofire"),
-                .product(name: "Moya", package: "Moya"),
             ]
         ),
     ]
